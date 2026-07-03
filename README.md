@@ -69,7 +69,7 @@ typedef struct {
 
 ### 实物展示 (Physical Prototype)
 <div align="center">
-  <img src="images/overview.webp" width="400" alt="Top View">
+  <img src="images/overview.jpg" width="400" alt="Top View">
   <p>图： Data Recorder 实物</p>
 </div>
 
