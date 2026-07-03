@@ -67,3 +67,16 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+**/.pio/
+**/.pioenvs/
+**/.piolibdeps/
+**/.vscode/
+.DS_Store
+Thumbs.db
+
+
+# 忽略特定的本地和缓存文件夹
+**/_Previews/
+**/History/
+
