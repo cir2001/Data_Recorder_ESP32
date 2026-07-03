@@ -70,7 +70,7 @@ typedef struct {
 ### 实物展示 (Physical Prototype)
 <div align="center">
   <img src="images/overview.webp" width="400" alt="Top View">
-  <p>图：LDC5072 编码器实物</p>
+  <p>图： Data Recorder 实物</p>
 </div>
 
 ---
