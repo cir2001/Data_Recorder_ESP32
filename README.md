@@ -41,7 +41,7 @@ This project implements a high-reliability data logging system based on the ESP3
 
 #### Structured Log File Header | 结构化日志文件头
 
-The system uses a custom binary header for data traceability:
+The system uses a custom binary header for data traceability:  
 系统采用自定义二进制文件头以保证数据可追溯性：
 
 ```cpp
