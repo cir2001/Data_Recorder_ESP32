@@ -78,7 +78,7 @@ typedef struct {
 ### ⚠️ Development Notes (开发注意事项)
 
 1. **SD Card Formatting**: Please ensure the SD card is formatted as **FAT32** for optimal compatibility.
-   **SD 卡格式化**：请确保 SD 卡已格式化为 **FAT32** 格式以获得最佳兼容性。
+---**SD 卡格式化**：请确保 SD 卡已格式化为 **FAT32** 格式以获得最佳兼容性。
 2. **Safe Ejection**: Always use the "Safe Eject" function (Long Press the **BACK** button on the HMI) before removing the SD card to ensure file integrity.
    **安全卸载**：拔出 SD 卡前，请务必使用“安全卸载”功能（长按 HMI 界面上的 **BACK** 键），以确保文件系统完整性。
 3. **Internal Pull-ups**: Input pins are configured with `INPUT_PULLUP` to match standard hardware button matrix designs.
