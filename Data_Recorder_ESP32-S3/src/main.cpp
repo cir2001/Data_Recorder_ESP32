@@ -13,8 +13,8 @@
 // ==========================================
 // 1. 硬件引脚与网络配置
 // ==========================================
-const char* ssid = "DDWW_Nwpu";           
-const char* password = "acq902m3";       
+const char* ssid = "tplink";           
+const char* password = "111111";       
 const char* udpAddress = "192.168.0.112"; 
 const int udpPort = 6500;                 
 
