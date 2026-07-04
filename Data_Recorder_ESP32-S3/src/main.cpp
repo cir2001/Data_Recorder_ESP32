@@ -11,12 +11,12 @@
 #include "App_HMI.h"
 
 // ==========================================
-// 1. 硬件引脚与网络配置
+// 1. 硬件引脚与网络配置 hardware pin and network configuration
 // ==========================================
-const char* ssid = "tplink";           
-const char* password = "111111";       
-const char* udpAddress = "192.168.0.112"; 
-const int udpPort = 6500;                 
+const char* ssid = "tplink";       // Wi-Fi SSID    
+const char* password = "111111";    // Wi-Fi Password     
+const char* udpAddress = "192.168.0.112"; // UDP target IP address
+const int udpPort = 6500;                 // UDP target port
 
 extern const uint32_t UART_BAUD_RATE = 115200; 
 
@@ -33,7 +33,7 @@ const int UART_TX  = 17;
 const int SD_CD    = 8;   
 
 // ==========================================
-// 2. 核心数据结构与全局变量
+// 2. 核心数据结构与全局变量 core data structures and global variables
 // ==========================================
 #define CHUNK_SIZE 1024  
 
@@ -70,7 +70,7 @@ volatile bool isRecording = false;
 volatile bool requestToggleRecord = false; 
 
 // ==========================================
-// 3. 任务 A：Wi-Fi UDP 发送 (Core 0)
+// 3. 任务 A：Wi-Fi UDP 发送 (Core 0) MISSION CRITICAL
 // ==========================================
 void TaskWiFiUpload(void *pvParameters) {
   Serial.printf("TaskWiFi running on Core %d\n", xPortGetCoreID());
@@ -92,7 +92,7 @@ void TaskWiFiUpload(void *pvParameters) {
 }
 
 // ==========================================
-// 4. 任务 B：TF 卡记录与热插拔 (Core 1)
+// 4. 任务 B：TF 卡记录与热插拔 (Core 1) MISSION CRITICAL
 // ==========================================
 void TaskSDLog(void *pvParameters) {
   Serial.printf("TaskSD running on Core %d\n", xPortGetCoreID());
@@ -226,7 +226,7 @@ void TaskSDLog(void *pvParameters) {
 }
 
 // ==========================================
-// 5. Setup 初始化
+// 5. Setup 初始化  Initialization
 // ==========================================
 void setup() {
   Serial.begin(115200);
@@ -271,7 +271,7 @@ void setup() {
 }
 
 // ==========================================
-// 6. 主循环 (专职超高速 UART 搬运工)
+// 6. 主循环 (专职超高速 UART 搬运工)  loop() (Dedicated High-Speed UART Data Mover)
 // ==========================================
 static LogChunk_t currentChunk = {0, {0}};
 static unsigned long lastReceiveTime = 0;
